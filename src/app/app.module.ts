@@ -22,13 +22,15 @@ import {AppRoutingModule} from './app-routing.module';
 import {ClientesListComponent} from './components/clientes/clientes-list/clientes-list.component';
 import {ProdutosListComponent} from './components/produtos/produtos-list/produtos-list.component';
 import {PedidosListComponent} from './components/pedidos/pedidos-list/pedidos-list.component';
+import { ClientesComponent } from './components/clientes/clientes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientesListComponent,
     ProdutosListComponent,
-    PedidosListComponent
+    PedidosListComponent,
+    ClientesComponent
   ],
   imports: [
     BrowserModule,

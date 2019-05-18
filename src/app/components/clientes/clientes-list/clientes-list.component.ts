@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {Cliente} from '../../../domain/cliente';
 import {ClienteService} from '../../../service/cliente.service';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
@@ -14,6 +14,8 @@ export class ClientesListComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
+
+  @Output() outputCliente: EventEmitter<Cliente> = new EventEmitter();
 
   constructor(private service: ClienteService) {
   }
@@ -35,7 +37,7 @@ export class ClientesListComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  click(row: Cliente) {
-    console.log(row);
+  onRowClick(obj: Cliente) {
+    this.outputCliente.emit(obj);
   }
 }
