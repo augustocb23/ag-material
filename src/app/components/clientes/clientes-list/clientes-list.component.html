@@ -1,3 +1,16 @@
-<p>
-  clientes-list works!
-</p>
+<mat-table class="mat-elevation-z8" [dataSource]="dataSource">
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.id}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <mat-header-cell *matHeaderCellDef>Nome</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{row.nome}}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row class="pointer" *matRowDef="let row; columns: displayedColumns" (click)="click(row)"></mat-row>
+</mat-table>
+
+<mat-paginator [pageSizeOptions]="[ 10, 20]" pageSize="15" showFirstLastButtons></mat-paginator>
