@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {Cliente} from '../../../domain/cliente';
 import {ClienteService} from '../../../service/cliente.service';
-import {MatPaginator, MatTableDataSource} from '@angular/material';
+import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 
 @Component({
   selector: 'app-clientes-list',
@@ -13,6 +13,7 @@ export class ClientesListComponent implements OnInit {
   dataSource = new MatTableDataSource<Cliente>();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   constructor(private service: ClienteService) {
   }
@@ -22,6 +23,7 @@ export class ClientesListComponent implements OnInit {
       (data) => {
         this.dataSource = new MatTableDataSource<Cliente>(data);
         this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
       });
   }
 

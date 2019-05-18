@@ -1,11 +1,11 @@
-<mat-table class="mat-elevation-z8" [dataSource]="dataSource">
+<mat-table class="mat-elevation-z8" [dataSource]="dataSource" matSort matSortActive="id" matSortDirection="desc">
   <ng-container matColumnDef="id">
-    <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>#</mat-header-cell>
     <mat-cell *matCellDef="let row">{{row.id}}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="nome">
-    <mat-header-cell *matHeaderCellDef>Nome</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Nome</mat-header-cell>
     <mat-cell *matCellDef="let row">{{row.nome}}</mat-cell>
   </ng-container>
 

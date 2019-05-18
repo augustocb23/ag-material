@@ -9,7 +9,7 @@ import {
   MatIconModule,
   MatListModule,
   MatPaginatorModule,
-  MatSidenavModule,
+  MatSidenavModule, MatSortModule,
   MatTableModule,
   MatToolbarModule
 } from '@angular/material';
@@ -44,7 +44,8 @@ import {PedidosListComponent} from './components/pedidos/pedidos-list/pedidos-li
     MatIconModule,
     CdkTableModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
