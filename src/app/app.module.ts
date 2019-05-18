@@ -5,8 +5,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 
 import {
-  MatButtonModule,
-  MatIconModule,
+  MatButtonModule, MatFormFieldModule,
+  MatIconModule, MatInputModule,
   MatListModule,
   MatPaginatorModule,
   MatSidenavModule, MatSortModule,
@@ -45,7 +45,9 @@ import {PedidosListComponent} from './components/pedidos/pedidos-list/pedidos-li
     CdkTableModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

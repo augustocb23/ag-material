@@ -1,3 +1,9 @@
+<mat-form-field>
+  <label>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </label>
+</mat-form-field>
+
 <mat-table class="mat-elevation-z8" [dataSource]="dataSource" matSort matSortActive="id" matSortDirection="desc">
   <ng-container matColumnDef="id">
     <mat-header-cell *matHeaderCellDef mat-sort-header>#</mat-header-cell>
@@ -13,4 +19,4 @@
   <mat-row class="pointer" *matRowDef="let row; columns: displayedColumns" (click)="click(row)"></mat-row>
 </mat-table>
 
-<mat-paginator [pageSizeOptions]="[ 10, 20]" pageSize="15" showFirstLastButtons></mat-paginator>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" pageSize="10" showFirstLastButtons></mat-paginator>

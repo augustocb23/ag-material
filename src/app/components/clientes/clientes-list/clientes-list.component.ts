@@ -31,6 +31,10 @@ export class ClientesListComponent implements OnInit {
     this.buscarTodos();
   }
 
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
   click(row: Cliente) {
     console.log(row);
   }
