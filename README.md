@@ -1,5 +1,11 @@
 # Material
 
+Projeto para testes do framework [Angular Material](https://material.angular.io).
+
+Utiliza a API [Rest Test](https://github.com/augustocb23/rest-test).
+
+## Instruções (gerado pelo Angular CLI)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
 ## Development server
