@@ -5,11 +5,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 
 import {
-  MatButtonModule, MatFormFieldModule,
-  MatIconModule, MatInputModule,
+  MatButtonModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
   MatListModule,
   MatPaginatorModule,
-  MatSidenavModule, MatSortModule,
+  MatSidenavModule,
+  MatSortModule,
   MatTableModule,
   MatToolbarModule
 } from '@angular/material';
@@ -22,7 +25,9 @@ import {AppRoutingModule} from './app-routing.module';
 import {ClientesListComponent} from './components/clientes/clientes-list/clientes-list.component';
 import {ProdutosListComponent} from './components/produtos/produtos-list/produtos-list.component';
 import {PedidosListComponent} from './components/pedidos/pedidos-list/pedidos-list.component';
-import { ClientesComponent } from './components/clientes/clientes.component';
+import {ClientesComponent} from './components/clientes/clientes.component';
+import {PedidosComponent} from './components/pedidos/pedidos.component';
+import {ProdutosComponent} from './components/produtos/produtos.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,9 @@ import { ClientesComponent } from './components/clientes/clientes.component';
     ClientesListComponent,
     ProdutosListComponent,
     PedidosListComponent,
-    ClientesComponent
+    ClientesComponent,
+    ProdutosComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,
