@@ -1,6 +1,6 @@
 <mat-form-field>
   <label>
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    <input #filter matInput (keyup)="applyFilter(filter.value)" placeholder="Filter">
   </label>
 </mat-form-field>
 
@@ -16,7 +16,7 @@
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row class="pointer" *matRowDef="let row; columns: displayedColumns" (click)="onRowClick(row)"></mat-row>
+  <mat-row matRipple class="pointer" *matRowDef="let row; columns: displayedColumns" (click)="onRowClick(row)"></mat-row>
 </mat-table>
 
 <mat-paginator [pageSizeOptions]="[5, 10, 20]" pageSize="10" showFirstLastButtons></mat-paginator>

@@ -10,7 +10,7 @@ import {
   MatIconModule,
   MatInputModule,
   MatListModule,
-  MatPaginatorModule,
+  MatPaginatorModule, MatRippleModule,
   MatSidenavModule,
   MatSortModule,
   MatTableModule,
@@ -56,7 +56,8 @@ import {ProdutosComponent} from './components/produtos/produtos.component';
     MatPaginatorModule,
     MatSortModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
