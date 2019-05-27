@@ -14,9 +14,18 @@
     <mat-header-cell *matHeaderCellDef mat-sort-header>Nome</mat-header-cell>
     <mat-cell *matCellDef="let row">{{row.nome}}</mat-cell>
   </ng-container>
+  <ng-container matColumnDef="acoes">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <button mat-icon-button (click)="onEdit(row)"><i class="material-icons">edit</i></button>
+      &nbsp;
+      <button mat-icon-button (click)="onDelete(row)" color="warn"><i class="material-icons">delete</i></button>
+    </mat-cell>
+  </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row matRipple class="pointer" *matRowDef="let row; columns: displayedColumns" (click)="onRowClick(row)"></mat-row>
+  <!--suppress JSUnusedGlobalSymbols -->
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
 </mat-table>
 
 <mat-paginator [pageSizeOptions]="[5, 10, 20]" pageSize="10" showFirstLastButtons></mat-paginator>

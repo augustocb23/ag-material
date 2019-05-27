@@ -9,7 +9,7 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
   styleUrls: ['./clientes-list.component.css']
 })
 export class ClientesListComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'nome'];
+  displayedColumns: string[] = ['id', 'nome', 'acoes'];
   dataSource = new MatTableDataSource<Cliente>();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -37,7 +37,14 @@ export class ClientesListComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  onRowClick(obj: Cliente) {
+  onEdit(obj: Cliente) {
     this.outputCliente.emit(Object.assign({}, obj));
+  }
+
+  onDelete(obj: Cliente) {
+    this.service.excluir(obj).subscribe(
+      () => this.buscarTodos(),
+      (error) => console.log('Erro ao excluir', error, obj)
+    );
   }
 }
