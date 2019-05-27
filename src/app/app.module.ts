@@ -5,7 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 
 import {
-  MatButtonModule,
+  MatButtonModule, MatDialogModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
@@ -28,6 +28,8 @@ import {PedidosListComponent} from './components/pedidos/pedidos-list/pedidos-li
 import {ClientesComponent} from './components/clientes/clientes.component';
 import {PedidosComponent} from './components/pedidos/pedidos.component';
 import {ProdutosComponent} from './components/produtos/produtos.component';
+import { ClientesDialogComponent } from './components/clientes/clientes-dialog/clientes-dialog.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import {ProdutosComponent} from './components/produtos/produtos.component';
     PedidosListComponent,
     ClientesComponent,
     ProdutosComponent,
-    PedidosComponent
+    PedidosComponent,
+    ClientesDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,12 @@ import {ProdutosComponent} from './components/produtos/produtos.component';
     MatSortModule,
     MatFormFieldModule,
     MatInputModule,
-    MatRippleModule
+    MatRippleModule,
+    MatDialogModule,
+    FormsModule
+  ],
+  entryComponents: [
+    ClientesDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,22 +1,13 @@
 <mat-toolbar color="primary">
   <span class="pointer" routerLink="/" routerLinkActive="active">Angular Material App</span>
+  <!-- divisor -->
+  <span style="width: 5%"></span>
+  <!-- links -->
+  <a mat-button routerLink="/clientes" routerLinkActive="active">Clientes</a>
+  <a mat-button routerLink="/produtos" routerLinkActive="active">Produtos</a>
+  <a mat-button routerLink="/pedidos" routerLinkActive="active">Pedidos</a>
 </mat-toolbar>
 
-<mat-sidenav-container fxLayout="row" fxFill>
-  <mat-sidenav class="mat-elevation-z5" #sidenav mode="side" disableClose [(opened)]="opened">
-    <mat-nav-list>
-      <a mat-list-item routerLink="/clientes" routerLinkActive="active">Clientes</a>
-      <a mat-list-item routerLink="/produtos" routerLinkActive="active">Produtos</a>
-      <a mat-list-item routerLink="/pedidos" routerLinkActive="active">Pedidos</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <button mat-button (click)="sidenav.toggle()">
-      <i class="material-icons">menu</i>
-    </button>
-
-    <div class="container">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

@@ -38,6 +38,6 @@ export class ClientesListComponent implements OnInit {
   }
 
   onRowClick(obj: Cliente) {
-    this.outputCliente.emit(obj);
+    this.outputCliente.emit(Object.assign({}, obj));
   }
 }
