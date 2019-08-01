@@ -1,7 +1,7 @@
 import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 
-import {Cliente} from '../../../domain/cliente';
+import {Cliente} from '../../../models/cliente';
 import {ClienteService} from '../../../service/cliente.service';
 
 @Component({

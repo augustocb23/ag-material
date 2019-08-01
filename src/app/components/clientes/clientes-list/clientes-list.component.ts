@@ -1,7 +1,8 @@
 import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
-import {Cliente} from '../../../domain/cliente';
+import {Cliente} from '../../../models/cliente';
 import {ClienteService} from '../../../service/cliente.service';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-clientes-list',
@@ -12,12 +13,14 @@ export class ClientesListComponent implements OnInit {
   displayedColumns: string[] = ['id', 'nome', 'acoes'];
   dataSource = new MatTableDataSource<Cliente>();
 
+  produtosLength: number;
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
   @Output() outputCliente: EventEmitter<Cliente> = new EventEmitter();
 
-  constructor(private service: ClienteService) {
+  constructor(private service: ClienteService, private route: ActivatedRoute) {
   }
 
   buscarTodos() {

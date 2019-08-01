@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {Cliente} from '../../domain/cliente';
+import {Cliente} from '../../models/cliente';
 import {ClientesListComponent} from './clientes-list/clientes-list.component';
 import {MatDialog} from '@angular/material';
 import {ClientesDialogComponent} from './clientes-dialog/clientes-dialog.component';
