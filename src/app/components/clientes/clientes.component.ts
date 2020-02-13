@@ -10,7 +10,7 @@ import {ClientesDialogComponent} from './clientes-dialog/clientes-dialog.compone
   styleUrls: ['./clientes.component.css']
 })
 export class ClientesComponent {
-  @ViewChild(ClientesListComponent) lista: ClientesListComponent;
+  @ViewChild(ClientesListComponent, { static: true }) lista: ClientesListComponent;
 
   constructor(public dialog: MatDialog) {
   }

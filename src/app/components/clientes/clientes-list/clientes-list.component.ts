@@ -15,8 +15,8 @@ export class ClientesListComponent implements OnInit {
 
   produtosLength: number;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   @Output() outputCliente: EventEmitter<Cliente> = new EventEmitter();
 
