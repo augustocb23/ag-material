@@ -1,7 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import {Cliente} from '../../models/cliente';
 import {ClientesListComponent} from './clientes-list/clientes-list.component';
-import {MatDialog} from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import {ClientesDialogComponent} from './clientes-dialog/clientes-dialog.component';
 
 @Component({
